@@ -19,8 +19,8 @@ cp hive/target/spatial-sdk-hive.jar /home/admin/apache-hive-1.2.1-bin/lib/spatia
 mv json/target/spatial-sdk-json-2.2.1-SNAPSHOT.jar json/target/spatial-sdk-json.jar
 cp json/target/spatial-sdk-json.jar /home/admin/apache-hive-1.2.1-bin/lib/spatial-sdk-json.jar
 
-hdfs dfs -put hive/target/spatial-sdk-hive-2.2.1-SNAPSHOT.jar /lib
-hdfs dfs -put json/target/spatial-sdk-json-2.2.1-SNAPSHOT.jar /lib
+hdfs dfs -put hive/target/spatial-sdk-hive.jar /lib
+hdfs dfs -put json/target/spatial-sdk-json.jar /lib
 
 # download and build api
 cd /tmp/gis/api
