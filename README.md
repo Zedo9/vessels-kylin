@@ -26,7 +26,12 @@ $ docker exec -it kylin bash
 $ hive -f /input/hive-setup.sh
 ```
 
-6. Your data is now fully setup and you can use Kylin by navigating to `http://localhost:7070/kylin/login`. You will be able to create a new project, import the AIS Database and start building you cubes.
+6. Your data is now fully setup and you can use Kylin by navigating to `http://localhost:7070/kylin/login`. You will be able to create a new project, import the AIS Database and start building you cubes (Use [this](http://kylin.incubator.apache.org/docs/tutorial/create_cube.html) guide on the official documentation for the cube and model wizard).
+
+- _The default credentials for logging in to the Apache Kylin Dashboard are : username : ADMIN | password : KYLIN_
+- _When creating the cube and model, make sure to setup the proper joins on foreign keys_ :
+  - `id` from the `vessels` table with `vessel_id` from the `trips` table
+  - `trip_id` from the `trip_trajectory` table with `id` from the `trips` table
 
 7. If you want to perform calculations such as trip duration, distance, avg speeds... you will need to setup the ESRI Hadoop libraries in Hive. From inside the container run
 
